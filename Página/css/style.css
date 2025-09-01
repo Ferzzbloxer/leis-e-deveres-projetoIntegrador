@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    background-color: rgb(235, 249, 255);
+}
+
+html {
+    background-color: rgb(200, 200, 200);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titulo_ {
+    font-size: 75px;
+    display: inline;
+}
+
+body {
+    border: 5px solid rgb(127, 182, 255);
+    border-radius: 5px;
+    min-height:764px ;
+}
+
+.warning-icon_bordered1 {
+    width: 100px;
+    display: inline-block; 
+}
+
+.warning-icon_bordered2 {
+    width: 100px;
+    display: inline-block;
+}
+
+.inicio_text {
+    font-size: larger;
+}
+
+#Início {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.navigation {
+   display: flex;
+   justify-content:space-between ;
+   border-radius: 4px;
+}
+
+.navigation a {
+    color: black;
+    text-decoration: none;
+}
+
+.navigation {
+    margin: 10px;
+    border:5px solid rgb(0, 148, 104);
+    border: 2px 2px 2px 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+}
+main{
+    display: flex;
+    align-items: center;
+}
+
+/* Coisinha de Lista */
+#divisor {
+    height: 20px;
+}
+
+/* DropDow */
+.dropbtn {
+  border: none;
+  font-size: large;
+  background-color: inherit;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+    background-color: darkgray;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    border: 1px solid black;
+    z-index: 1;
+    font-size: smaller;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.voltar a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: red;
+}
+
+.outrasPerguntas {
+    display: flex;
+}
+
+#google_translate_element {
+    display: flex;
+    justify-self: center;
+    width: 170px;
+}
+
+.letra-grande{
+    font-size: 40px;
+}
+
+table.tabela-placa {
+    width: calc(100% - 20px);
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: 10px;
+}
+
+table.tabela-placa td {
+    border: 1px solid #979797;
+    padding: 10px;
+    text-align: center;
+}
+
+table.tabela-placa img {
+    max-width: 100px;
+    height: auto;
+}
+
+table.tabela-placa h2 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#eng {
+    display: none;
+}

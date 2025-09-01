@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(235, 249, 255);
+}
+
+/* Estilo geral */
+html {
+    background-color: rgb(200, 200, 200);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    border: 5px solid rgb(127, 182, 255);
+    border-radius: 5px;
+    min-height: 764px;
+}
+
+/* Títulos */
+.titulo_ {
+    font-size: 75px;
+    display: inline;
+    text-align: center;
+}
+
+/* Ícones */
+.warning-icon_bordered1, .warning-icon_bordered2 {
+    width: 100px;
+    display: inline-block;
+}
+
+/* Navegação */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    margin: 10px;
+    border: 5px solid rgb(0, 148, 104);
+    padding: 20px;
+}
+
+.navigation a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navigation a:hover {
+    color: rgb(0, 148, 104);
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    background-color: darkgray;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    border: 1px solid black;
+    z-index: 1;
+    font-size: smaller;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Conteúdo principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.letra-grande {
+    font-size: 40px;
+    text-align: center;
+}
+
+/* Tabelas */
+table.tabela-placa {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsivo */
+    gap: 20px;
+}
+
+table.tabela-placa td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table.tabela-placa img {
+    max-width: 100px;
+    height: auto;
+}
+
+table.tabela-placa h2 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Idiomas */
+#eng {
+    display: none;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .titulo_ {
+        font-size: 50px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navigation a {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    table.tabela-placa {
+        grid-template-columns: 1fr; /* Apenas uma coluna em telas menores */
+    }
+
+    .letra-grande {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo_ {
+        font-size: 40px;
+    }
+
+    .navigation {
+        padding: 5px;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+
+    table.tabela-placa img {
+        max-width: 80px;
+    }
+
+    .letra-grande {
+        font-size: 24px;
+    }
+}
