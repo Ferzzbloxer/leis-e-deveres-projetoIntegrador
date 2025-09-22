@@ -6,7 +6,9 @@
     <title>Leis de Trânsito</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="imgs/1397905.png">
-
+    <style>
+        #eng { display: none; } /* Começa mostrando apenas PT-BR */
+    </style>
 </head>
 <body>
 
@@ -16,20 +18,18 @@
         <center><div class="título" id="pt-br">
             <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1">
             <h1 class="titulo_">Leis de Trânsito</h1>
-            <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">            
-            <button  class="botaotrocar" onclick="toggleLanguage()">Toggle Language</button>
+            <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
         </div></center>
 
         <center><div class="título" id="eng">
             <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1">
             <h1 class="titulo_">Traffic Laws</h1>
-            <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">            
-            <button  class="botaotrocar" onclick="toggleLanguage()">Trocar linguagem</button>
+            <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
         </div></center>
 
         
         <section class="navigation" id="pt-br">
-            <h1>Página Inicial</h1>
+            <h1>Home Page</h1>
             <div class="dropdown">
                 <button class="dropbtn"><h1>Leis & Deveres</h1></button>
                 <div class="dropdown-content">
@@ -39,7 +39,7 @@
             </div>
             <h1><a href="multas.html">Multas</a></h1>
             <h1><a href="https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/fale-conosco-senatran">Perguntas & respostas</a></h1>
-            <h1><a href="https://github.com/Ferzzbloxer/leis-e-deveres-projetoIntegrador" target="_blank"><img src="imgs/GitHub-Logo.png" alt="Github Repository" style="width: 65px;"></a></h1>
+            <button onclick="toggleLanguage()">Toggle Language</button>
         </section>
 
         <section class="navigation" id="eng">
@@ -53,7 +53,7 @@
             </div>
             <h1><a href="multas.html">Fine</a></h1>
             <h1><a href="perguntas&respostas.html">Questions & Answers</a></h1>
-
+            <button onclick="toggleLanguage()">Trocar linguagem</button>
         </section>
 
     </header>
@@ -101,25 +101,8 @@
                     Esperamos que nosso conteúdo te ajude!
                     Se quiser mandar sugestões ou tirar dúvidas, é só entrar em contato com a gente na aba de Contato. 🚗
                     <br><br>
-                    — Fernando, Otávio e Miguel.
+                    — Otávio & Fernando e Miguel.
                 </p>
-            </section>
-            <section id="imagens-grupo">
-                <div class="card-foto">
-                    <img src="imgs/file (1).enc" alt="Foto-Fernando">
-                    <center><p>Fernando Saar Corrêa</p></center>
-                    <p>Currículo Lattes: <a href="http://lattes.cnpq.br/7836683831633690">http://lattes.cnpq.br/7836683831633690</a></p>
-                </div>
-                <div class="card-foto">
-                    <img src="imgs/file.enc" alt="Foto-Otávio">
-                    <center><p>Otávio Puerta</p></center>
-                    <p>Currículo Lattes: <a href="http://lattes.cnpq.br/6119926607243666">http://lattes.cnpq.br/6119926607243666</a></p>
-                </div>
-                <div class="card-foto">
-                    <img src="imgs/Miguel.jpeg" alt="Foto-Miguel">
-                    <center><p>Miguel Lorenzo</p></center>
-                    <p>Currículo Lattes: <a href=""></a></p>
-                </div>
             </section>
         </section>
 
@@ -173,18 +156,14 @@
         const ptBrElements = document.querySelectorAll("#pt-br");
         const engElements = document.querySelectorAll("#eng");
 
-        const isPtVisible = Array.from(engElements).some(el => el.style.display !== "none" && el.style.display !== "");
+        const isPtVisible = Array.from(ptBrElements).some(el => el.style.display !== "none" && el.style.display !== "");
 
         if (isPtVisible) {
-        ptBrElements.forEach(el => {
-           el.style.display = el.classList.contains("navigation") ? "flex" : "block";
-        });
-        engElements.forEach(el => el.style.display = "none");
+            ptBrElements.forEach(el => el.style.display = "none");
+            engElements.forEach(el => el.style.display = "block");
         } else {
-        engElements.forEach(el => {
-           el.style.display = el.classList.contains("navigation") ? "flex" : "block";
-        });
-        ptBrElements.forEach(el => el.style.display = "none");
+            engElements.forEach(el => el.style.display = "none");
+            ptBrElements.forEach(el => el.style.display = "block");
         }
     }
     </script>
