@@ -1,237 +1,171 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leis de Trânsito</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="imgs/1397905.png">
+    <style>
+        #eng { display: none; } /* Começa mostrando apenas PT-BR */
+    </style>
 </head>
-
 <body>
-
-    <!--INÍCIO-->
 
     <header>
         <div id="divisor"></div>
-        <!--Título-->
-        <center>
-            <div class="título">
-                <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1"><!---->
-                <h1 class="titulo_">Leis de Trânsito pra Neandertais</h1><!----><img
-                    src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
-            </div>
-        </center>
+        
+        <center><div class="título" id="pt-br">
+            <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1">
+            <h1 class="titulo_">Leis de Trânsito</h1>
+            <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
+        </div></center>
 
-        <!--Tabela de navegação-->
-        <section class="navigation">
-            <h1><a href="index.html">Home Page</a></h1>
+        <center><div class="título" id="eng">
+            <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1">
+            <h1 class="titulo_">Traffic Laws</h1>
+            <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
+        </div></center>
+
+        
+        <section class="navigation" id="pt-br">
+            <h1>Home Page</h1>
             <div class="dropdown">
-                <button class="dropbtn">
-                    <h1>Leis & Deveres</h1>
-                </button>
+                <button class="dropbtn"><h1>Leis & Deveres</h1></button>
                 <div class="dropdown-content">
-                    <a href="leis.html">
-                        <h2>Leis</h2>
-                    </a>
-                    
-                        <h2>Deveres</h2>
-                    
+                    <a href="leis.html"><h2>Leis</h2></a>
+                    <a href="deveres.html"><h2>Deveres</h2></a>
                 </div>
             </div>
             <h1><a href="multas.html">Multas</a></h1>
-            <h1><a href="perguntas&respostas.html">Perguntas & respostas</a></h1>
+            <h1><a href="https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/fale-conosco-senatran">Perguntas & respostas</a></h1>
+            <button onclick="toggleLanguage()">Toggle Language</button>
         </section>
 
-        <!--INFO PRINCIPAL-->
-        <main>
+        <section class="navigation" id="eng">
+            <h1>Home Page</h1>
+            <div class="dropdown">
+                <button class="dropbtn"><h1>Laws and Duties</h1></button>
+                <div class="dropdown-content">
+                    <a href="leis.html"><h2>Laws</h2></a>
+                    <a href="deveres.html"><h2>Duties</h2></a>
+                </div>
+            </div>
+            <h1><a href="multas.html">Fine</a></h1>
+            <h1><a href="perguntas&respostas.html">Questions & Answers</a></h1>
+            <button onclick="toggleLanguage()">Trocar linguagem</button>
+        </section>
+
+    </header>
+
+    <main>
+        <section id="pt-br">
             <section id="Início">
-                <center>
-                    <h1 class="letra-grande">Deveres</h1>
-                </center>
-                <ul class="inicio_text">
-                    <p>Deveres do Motorista:</p><br>
-                    Principais deveres:
-                    Respeitar as leis de trânsito:
-                    Obedecer aos sinais de trânsito, limites de velocidade e outras normas estabelecidas.
-                    Garantir a segurança:
-                    Evitar acidentes, dirigir com atenção e responsabilidade, mantendo distância segura dos outros
-                    veículos e utilizando equipamentos de segurança como o cinto de segurança.
-                    Manter o veículo em boas condições:
-                    Realizar manutenções regulares, como verificar freios, pneus, óleo e outros componentes essenciais
-                    para o bom funcionamento do veículo.
-                    Respeitar os outros usuários da via:
-                    Ceder passagem quando necessário, não estacionar em locais proibidos, evitar comportamentos
-                    agressivos e respeitar a vez dos pedestres e ciclistas.
-                    Não dirigir sob efeito de álcool ou drogas:
-                    É fundamental evitar o consumo de substâncias que possam prejudicar a capacidade de dirigir.
-                    Realizar exames toxicológicos (para motoristas profissionais):
-                    Motoristas profissionais devem se submeter a exames periódicos para verificar o uso de substâncias
-                    ilícitas.
-                    Conhecer o veículo:
-                    É importante que o motorista conheça as características e funcionalidades do veículo que está
-                    dirigindo.
-                    Evitar distrações:
-                    Não utilizar o celular ou outros dispositivos eletrônicos enquanto dirige.
-                    Prever situações de risco:
-                    Estar atento ao ambiente ao redor e antecipar possíveis perigos para evitar acidentes.
-                    Cumprir a jornada de trabalho:
-                    Motoristas profissionais devem respeitar os limites de tempo de direção e descanso estabelecidos por
-                    lei.
-                </ul>
-                <h2>Placas de transito brasileiras</h2>
-                <table class="tabela-placa">
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-PARE-parada-obrigatoria-R-1.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-de-a-preferencia-R-2.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-sentido-proibido-R-3.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-virar-a-esquerda-R-4a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-virar-a-direita-R-4b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-retornar-a-esquerda-R-5a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-retornar-a-direita-R-5b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-estacionar-R-6a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-estacionamento-regulamentado-R-6b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-parar-e-estacionar-R-6c.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-ultrapassar-R-7.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-mudar-de-faixa-ou-pista-de-transito-da-esquerda-para-direita-R-8a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-mudar-de-faixa-ou-pista-de-transito-da-direita-para-esquerda-R-8b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-transito-de-caminhoes-R-9.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-transito-de-veiculos-automotores-R-10.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-transito-de-veiculos-de-tracao-animal-R-11.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-transito-de-bicicletas-R-12.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-transito-de-tratores-e-maquinas-de-obras-R-13.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-peso-bruto-total-maximo-permitido-R-14.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-altura-maxima-permitida-R-15.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-largura-maxima-permitida-R-16.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-peso-maximo-permitido-por-eixo-R-17.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-comprimento-maximo-permitido-R-18.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-velocidade-maxima-permitida-80kmh-R-19.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-proibido-acionar-buzina-ou-sinal-sonoro-R-20.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-alfandega-R-21.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-uso-obrigatorio-de-corrente-R-22.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-conserve-se-a-direita-R-23.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-sentido-de-circulacao-da-via-pista-R-24a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-passagem-obrigatoria-R-24b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-vire-a-esquerda-R-25a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-vire-a-direita-R-25b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-siga-em-frente-ou-a-esquerda-R-25c.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/10/Placa-siga-em-frente-ou-a-direita-R-25d.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-siga-em-frente-R-26.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-onibus-caminhoes-e-veiculos-de-grande-porte-mantenham-se-a-direita-R-27.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-duplo-sentido-de-circulacao-R-28.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-proibido-transito-de-pedestres-R-29.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-pedestre-ande-pela-esquerda-R-30.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-pedestre-ande-pela-direita-R-31.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-circulacao-exclusiva-de-onibus-R-32.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-sentido-de-circulacao-na-rotatoria-R-33.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-circulacao-exclusiva-de-bicicletas-R-34.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-ciclista-transite-a-esquerda-R-35a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-ciclista-transite-a-direita-R-35b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-ciclistas-a-esquerda-pedestres-a-direita-R-36a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-pedestres-a-esquerda-ciclistas-a-direita-R-36b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-proibido-transito-de-motocicletas-motonetas-e-ciclomotores-R-37.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-proibido-transito-de-onibus-R-38.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-circulacao-exclusiva-de-caminhao-R-39.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-transito-proibido-a-carros-de-mao-R-40.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-curva-acentuada-a-esquerda-A-1a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-curva-acentuada-a-direita-A-1b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-curva-a-esquerda-A-2a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-curva-a-direita-A-2b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-pista-sinuosa-a-esquerda-A-3a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-pista-sinuosa-a-direita-A-3b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-curva-acentuada-em-S-a-esquerda-A-4a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-curva-acentuada-em-S-a-direita-A-4b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-curva-em-S-a-esquerda-A-5a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-curva-em-S-a-direita-A-5b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-cruzamento-de-vias-A-6.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-via-lateral-a-esquerda-A-7a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-via-lateral-a-direita-A-7b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-intersecao-em-T-A-8.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-bifurcacao-em-Y-A-9.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-entroncamento-obliquo-a-esquerda-A-10a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-entroncamento-obliquo-a-direita-A-10b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-juncoes-sucessivas-contrarias-primeira-a-esquerda-A-11a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-juncoes-sucessivas-contrarias-primeira-a-direita-A-11b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-intersecao-em-circulo-A-12.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-confluencia-a-esquerda-A-13a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-confluencia-a-direita-A-13b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-semaforo-a-frente-A-14.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-parada-obrigatoria-a-frente-A-15.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-bonde-A-16.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-pista-irregular-A-17.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-saliencia-ou-lombada-A-18.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-depressao-A-19.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-declive-acentuado-A-20a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-declive-acentuada-A-20b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-estreitamento-de-pista-ao-centro-A-21a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-estreitamento-de-pista-a-esquerda-A-21b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-estreitamento-de-pista-a-direita-A-21c.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-alargamento-de-pista-a-esquerda-A-21d.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-alargamento-de-pista-a-direita-A-21e.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-ponte-estreita-A-22.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-ponte-movel-A-23.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-obras-A-24.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-mao-dupla-adiante-A-25.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-sentido-unico-A-26a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-sentido-duplo-A-26b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-area-com-desmoronamento-A-27.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-pista-escorregadia-A-28.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-projecao-de-cascalho-A-29.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-transito-de-ciclistas-A-30a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-passagem-sinalizada-de-ciclistas-A-30b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-transito-compartilhado-por-ciclistas-e-pedestres-A-30c.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-transito-de-tratores-ou-maquinario-agricola-A-31.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-transito-de-pedestres-A-32a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-passagem-sinalizada-de-pedestres-A-32b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-area-escolar-A-33a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-passagem-sinalizada-de-escolares-A-33b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-criancas-A-34.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-animais-A-35.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-animais-selvagens-A-36.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-altura-limitada-A-37.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-largura-limitada-A-38.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-passagem-de-nivel-sem-barreira-A-39.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-passagem-de-nivel-com-barreira-A-40.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/placa-cruz-de-santo-andre-a-41.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-inicio-de-pista-dupla-A-42a.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-fim-de-pista-dupla-A-42b.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-pista-dividida-A-42c.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-aeroporto-A-43.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-vento-lateral-A-44.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-rua-sem-saida-A-45.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-peso-bruto-total-limitado-A-46.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-peso-limitado-por-eixo-A-47.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-comprimento-limitado-A-48.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-area-de-estacionamento-S-1.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-servico-telefonico-S-2.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-servico-mecanico-S-3.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-posto-de-combustivel-abastecimento-S-4.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-pronto-socorro-S-5.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-terminal-rodoviario-S-6.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-alimentacao-S-7.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-borracheiro-S-8.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-hotel-S-9.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-area-de-campismo-S-10.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-aeroporto-S-11.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-transporte-sobre-agua-S-12.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-terminal-ferroviario-S-13.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-ponto-de-parada-S-14.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-informacao-turistica-S-15.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placa-de-servico-auxiliar-pedagio-S-16.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placas-de-atrativo-turistico.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placas-de-identificacao-de-rodovias.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placas-de-identificacao-quilometrica.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placas-de-orientacao-de-destino.jpg"></td></tr>
-  <tr><td><img src="https://blog.sinalcenter.com.br/wp-content/uploads/2023/11/Placas-de-pedagio.jpg"></td></tr>
-
-                </table>
+                <center><h1>Início</h1></center>
+                <p class="inicio_text">
+                    <br>
+                    Olá! Nós somos o Otávio, Fernando e Miguel, criadores do site Leis de Trânsito Brasil.
+                    Decidimos criar esse espaço com um objetivo simples: ajudar as pessoas a entender
+                    melhor as regras de trânsito e dirigir com mais segurança.
+                    <br>
+                </p>
+                <p class="inicio_text">
+                    <br>
+                    A ideia surgiu quando estávamos estudando para tirar a carteira de motorista e percebemos
+                    como muitos conteúdos sobre o Código de Trânsito Brasileiro (CTB) são confusos, técnicos
+                    demais ou desatualizados. Pensamos: por que não fazer algo mais claro, direto e acessível
+                    para todos?
+                    <br>
+                </p>
+                <p class="inicio_text">
+                    <br>
+                    Miguel é estudante de Direito e sempre teve interesse por legislação, principalmente a parte
+                    que impacta o nosso dia a dia. Já o Fernando é desenvolvedor web e apaixonado por tecnologia
+                     — foi ele quem programou todo o site.
+                     <br>
+                </p>
+                <p class="inicio_text">
+                    <br>
+                    Aqui, você vai encontrar:
+                    <br>
+                    -Explicações simples sobre as leis de trânsito
+                    <br>
+                    -Exemplos práticos
+                    <br>
+                    -Ilustrações das placas
+                    <br>
+                    -Atualizações importantes sobre mudanças no CTB
+                    <br>
+                    -Nosso objetivo é que esse site sirva tanto para quem está aprendendo a dirigir quanto para motoristas experientes que querem se manter atualizados. Afinal, trânsito seguro começa com informação de qualidade.
+                    <br><br>
+                    Esperamos que nosso conteúdo te ajude!
+                    Se quiser mandar sugestões ou tirar dúvidas, é só entrar em contato com a gente na aba de Contato. 🚗
+                    <br><br>
+                    — Otávio & Fernando e Miguel.
+                </p>
             </section>
-        </main>
+        </section>
 
-        <!--RODAPÉ-->
-        <footer></footer>
+        <section id="eng">
+            <center><h1>Start</h1></center>
+            <p class="inicio_text">
+                <br>
+                Hello! We are Otávio, Fernando, and Miguel, creators of the website *Leis de Trânsito Brasil*.
+                We created this space with a simple goal: to help people better understand traffic rules and drive more safely.
+                <br>
+            </p>
+            <p class="inicio_text">
+                <br>
+                The idea came to us while we were studying to get our driver's licenses and noticed how much of the content about the Brazilian Traffic Code (CTB) is confusing, overly technical, or outdated.
+                So we thought: why not make something clearer, more direct, and accessible to everyone?
+                <br>
+            </p>
+            <p class="inicio_text">
+                <br>
+                Miguel is a law student and has always been interested in legislation, especially the kind that affects our daily lives.
+                Fernando is a web developer and passionate about technology — he built the entire site from scratch.
+                <br>
+            </p>
+            <p class="inicio_text">
+                <br>
+                On this site, you’ll find:
+                <br>
+                - Clear explanations of traffic laws
+                <br>
+                - Practical examples
+                <br>
+                - Road sign illustrations
+                <br>
+                - Important updates on changes to the CTB
+                <br>
+                Our goal is for this site to be useful both for people learning to drive and for experienced drivers who want to stay up to date.
+                After all, safe driving starts with quality information.
+                <br><br>
+                We hope our content helps you!
+                If you’d like to send suggestions or ask questions, just visit the Contact tab. 🚗
+                <br><br>
+                — Otávio, Fernando & Miguel.
+            </p>
+        </section>
+    </main>
 
-        </footer>
+    <footer></footer>
+
+    <script>
+    function toggleLanguage() {
+        const ptBrElements = document.querySelectorAll("#pt-br");
+        const engElements = document.querySelectorAll("#eng");
+
+        const isPtVisible = Array.from(ptBrElements).some(el => el.style.display !== "none" && el.style.display !== "");
+
+        if (isPtVisible) {
+            ptBrElements.forEach(el => el.style.display = "none");
+            engElements.forEach(el => el.style.display = "block");
+        } else {
+            engElements.forEach(el => el.style.display = "none");
+            ptBrElements.forEach(el => el.style.display = "block");
+        }
+    }
+    </script>
 </body>
-
 </html>
