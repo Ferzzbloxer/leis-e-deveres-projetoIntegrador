@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Leis de Trânsito</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/estilo.css">
         <link rel="shortcut icon" type="image/x-icon" href="imgs/1397905.png">
     </head>
     <body>
@@ -16,11 +16,13 @@
             <!--Título em Português-->
             <center><div class="título" id="pt-br">
                 <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1"><!----><h1 class="titulo_">Leis de Trânsito</h1><!----><img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
+             <button  class="botaotrocar" onclick="toggleLanguage()">Toggle Language</button>
             </div></center>
 
             <!--Título em Inglês-->
             <center><div class="título" id="eng">
                 <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1"><!----><h1 class="titulo_">Traffic Laws for Neanderthals</h1><!----><img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
+             <button  class="botaotrocar" onclick="toggleLanguage()">trocar linguagem</button>
             </div></center>
 
             <!--Tabela de navegação em Português-->
@@ -64,6 +66,7 @@
                     <li><p>Média: Em média R$ 130,16 e acréscimo de 4 pontos na <a href="https://www.google.com/search?sca_esv=f5680b47e71e92a2&sxsrf=AE3TifMHFJX7q3CflIpKAjy5QwmNJXdQGw:1754909487404&q=O+que+%C3%A9+significa+CNH?&spell=1&sa=X&ved=2ahUKEwj6jfCky4KPAxWbqpUCHUAmG9IQBSgAegQICRAB&biw=1440&bih=765&dpr=1" target="_blank">CNH <img src="imgs/pesquisa-img.webp" alt="pesquisa-img" style="width: 15px;"></a>.</p></li>
                     <li><p>Grave: R$ 195,23 e acréscimo de 5 pontos na <a href="https://www.google.com/search?sca_esv=f5680b47e71e92a2&sxsrf=AE3TifMHFJX7q3CflIpKAjy5QwmNJXdQGw:1754909487404&q=O+que+%C3%A9+significa+CNH?&spell=1&sa=X&ved=2ahUKEwj6jfCky4KPAxWbqpUCHUAmG9IQBSgAegQICRAB&biw=1440&bih=765&dpr=1" target="_blank">CNH <img src="imgs/pesquisa-img.webp" alt="pesquisa-img" style="width: 15px;"></a>.</p></li>
                     <li><p>Gravíssima: O condutor paga em torno de R$ 293,47 e tem 7 pontos adicionados na <a href="https://www.google.com/search?sca_esv=f5680b47e71e92a2&sxsrf=AE3TifMHFJX7q3CflIpKAjy5QwmNJXdQGw:1754909487404&q=O+que+%C3%A9+significa+CNH?&spell=1&sa=X&ved=2ahUKEwj6jfCky4KPAxWbqpUCHUAmG9IQBSgAegQICRAB&biw=1440&bih=765&dpr=1" target="_blank">CNH <img src="imgs/pesquisa-img.webp" alt="pesquisa-img" style="width: 15px;"></a>.</p></li>
+                    <div class="imagd"><img src="imgs/shutterstock_2286522013-732x488.jpg" alt=""></div>
                 </ul>
                 <br>
                 <p>Como Consultar e Pagar as Multas:</p>
@@ -75,6 +78,7 @@
                 </ul>
                 <br>
                 <p>Outras Penalidades e Pontos:</p>
+                <div class="image"><img src="imgs/policeman-issuing-a-fine-for-a-female-driver-2021-09-02-08-49-21-utc-1024x683-1.jpg" alt=""></div>
                 <ul>
                     <li><p>Pontos na CNH: Cada infração de trânsito acarreta na adição de pontos na <a href="https://www.detran.pr.gov.br/Pagina/Pontuacao-na-CNH">Carteira Nacional de Habilitação (CNH) <img src="imgs/pesquisa-img.webp" alt="pesquisa-img" style="width: 15px;"></a>.</p></li>
                     <li><p>Suspensão: A suspensão da CNH ocorre quando o condutor atinge um determinado número de pontos na carteira, geralmente 20 ou mais, em um período de 12 meses.</p></li>
@@ -82,6 +86,8 @@
                     <li><p>Recursos: O condutor tem direito a recorrer da multa dentro de um prazo determinado, caso não concorde com a penalidade.</p></li>
                     <li><p>Defesa: É importante reunir os documentos e provas que possam auxiliar na defesa do recurso.</p></li>
                 </ul><br>
+                <div class="imagd"><img src="imgs/duvidas-mais-frequentes-multa.jpg" alt=""></div>
+
                 <p>Informações Adicionais:</p>
                 <p>O Código de Trânsito Brasileiro (CTB) estabelece as infrações e suas penalidades. </p>
                 <p>As multas são consideradas infrações administrativas, ou seja, não são consideradas crimes.</p>
@@ -101,6 +107,7 @@
                     <li><p>Medium: On average R$ 130.16 and an addition of 4 points to the <a href="https://www.google.com/search?q=What+is+a+CNH+(driver's+license)" target="_blank">CNH <img src="imgs/pesquisa-img.webp" alt="search-icon" style="width: 15px;"></a>.</p></li>
                     <li><p>Serious: R$ 195.23 and an addition of 5 points to the <a href="https://www.google.com/search?q=What+is+a+CNH+(driver's+license)" target="_blank">CNH <img src="imgs/pesquisa-img.webp" alt="search-icon" style="width: 15px;"></a>.</p></li>
                     <li><p>Very Serious: The driver pays around R$ 293.47 and has 7 points added to their <a href="https://www.google.com/search?q=What+is+a+CNH+(driver's+license)" target="_blank">CNH <img src="imgs/pesquisa-img.webp" alt="search-icon" style="width: 15px;"></a>.</p></li>
+                    <div class="imagd"><img src="imgs/shutterstock_2286522013-732x488.jpg" alt=""></div>
                 </ul>
                 <br>
                 <p>How to Check and Pay Fines:</p>
@@ -112,6 +119,7 @@
                 </ul>
                 <br>
                 <p>Other Penalties and Points:</p>
+                <div class="image"><img src="imgs/policeman-issuing-a-fine-for-a-female-driver-2021-09-02-08-49-21-utc-1024x683-1.jpg" alt=""></div>
                 <ul>
                     <li><p>Points on CNH: Each traffic violation results in the addition of points to the <a href="https://www.detran.pr.gov.br/Pagina/Pontuacao-na-CNH">National Driver's License (CNH) <img src="imgs/pesquisa-img.webp" alt="search-icon" style="width: 15px;"></a>.</p></li>
                     <li><p>Suspension: The suspension of the CNH occurs when a driver reaches a certain number of points on their license, usually 20 or more, within a 12-month period.</p></li>
@@ -119,6 +127,7 @@
                     <li><p>Appeals: The driver has the right to appeal the fine within a specified period if they do not agree with the penalty.</p></li>
                     <li><p>Defense: It is important to gather the documents and evidence that can help in the defense of the appeal.</p></li>
                 </ul><br>
+                <div class="imagd"><img src="imgs/duvidas-mais-frequentes-multa.jpg" alt=""></div>
                 <p>Additional Information:</p>
                 <p>The Brazilian Traffic Code (CTB) establishes the violations and their penalties.</p>
                 <p>Fines are considered administrative infractions, meaning they are not considered crimes.</p>
@@ -131,5 +140,25 @@
         <footer>
 
         </footer>
+        <script>
+    function toggleLanguage() {
+        const ptBrElements = document.querySelectorAll("#pt-br");
+        const engElements = document.querySelectorAll("#eng");
+
+        const isPtVisible = Array.from(engElements).some(el => el.style.display !== "none" && el.style.display !== "");
+
+        if (isPtVisible) {
+        ptBrElements.forEach(el => {
+           el.style.display = el.classList.contains("navigation") ? "flex" : "block";
+        });
+        engElements.forEach(el => el.style.display = "none");
+        } else {
+        engElements.forEach(el => {
+           el.style.display = el.classList.contains("navigation") ? "flex" : "block";
+        });
+        ptBrElements.forEach(el => el.style.display = "none");
+        }
+    }
+    </script>
     </body>
 </html>
