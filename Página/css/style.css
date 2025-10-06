@@ -169,22 +169,3 @@ p {
 #Placas-Amarelas {
     display: none;
 }
-
-#imagens-grupo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.card-foto {
-    height: 460px;
-    width: 300px;
-}
-
-.card-foto img {
-    display: flex;
-    width: 250px;
-    justify-self: center;
-    margin-top: 23px;
-    margin-bottom: 20px;
-}
