@@ -11,6 +11,9 @@
 <body>
 
     <header>
+     
+        <button class="botaotema" onclick="toggleTheme()">Tema Claro/Escuro</button>
+
         <div id="divisor"></div>
         
         <center><div class="título" id="pt-br">
@@ -31,9 +34,9 @@
         <section class="navigation" id="pt-br">
             <h1>Home Page</h1>
             <div class="dropdown">
-                <button class="dropbtn"><h1>Leis & Deveres</h1></button>
+                <button class="dropbtn"><h1>Direitos & Deveres</h1></button>
                 <div class="dropdown-content">
-                    <a href="leis.html"><h2>Leis</h2></a>
+                    <a href="direitos.html"><h2>Direitos</h2></a>
                     <a href="deveres.html"><h2>Deveres</h2></a>
                 </div>
             </div>
@@ -45,9 +48,9 @@
         <section class="navigation" id="eng">
             <h1>Home Page</h1>
             <div class="dropdown">
-                <button class="dropbtn"><h1>Laws and Duties</h1></button>
+                <button class="dropbtn"><h1>Rights and Duties</h1></button>
                 <div class="dropdown-content">
-                    <a href="leis.html"><h2>Laws</h2></a>
+                    <a href="direitos.html"><h2>Rights</h2></a>
                     <a href="deveres.html"><h2>Duties</h2></a>
                 </div>
             </div>
@@ -103,7 +106,7 @@
                     Esperamos que nosso conteúdo te ajude!
                     Se quiser mandar sugestões ou tirar dúvidas, é só entrar em contato com a gente na aba de Contato. 🚗
                     <br><br>
-                    — Otávio & Fernando e Miguel.
+
                 </p>
             </section>
         </section>
@@ -146,19 +149,21 @@
                 We hope our content helps you!
                 If you’d like to send suggestions or ask questions, just visit the Contact tab. 🚗
                 <br><br>
-                — Otávio, Fernando & Miguel.
+
             </p>
         </section>
     </main>
 
-    <footer>
+    <footer class="nos">
         <div><img src="imgs/unnamed.jpg" alt="">
-        <h2>gmail: 
-            
-        </h2>
+        <h2>Fernando Saar Correra</h2>
         </div>
-        <img src="imgs/unnamed (1).jpg" alt="">
-
+        <div><img src="imgs/unnamed (1).jpg" alt="">
+        <h2>Miguel Lorenzo Souza</h2>
+        </div>
+        <div><img src="Captura de tela 2025-10-13 075400.jpeg" alt="">
+        <h2>Otavio Puerta</h2>
+        </div>
     </footer>
 
     <script>
@@ -178,6 +183,23 @@
            el.style.display = el.classList.contains("navigation") ? "flex" : "block";
         });
         ptBrElements.forEach(el => el.style.display = "none");
+        }
+    }
+
+    function toggleTheme() {
+        const body = document.body;
+        if (body.classList.contains('dark-theme')) {
+            body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    window.onload = function() {
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
         }
     }
     </script>

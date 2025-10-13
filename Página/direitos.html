@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direitos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/1397905.png">
+</head>
+<body>
+    <header>
+        <div id="divisor"></div>
+
+        <center>
+            <div class="título" id="pt-br">
+                <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1">
+                <h1 class="titulo_">Leis de Trânsito</h1>
+                <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
+                <button class="botaotrocar" onclick="toggleLanguage()">Toggle Language</button>
+            </div>
+        </center>
+
+        <center>
+            <div class="título" id="eng">
+                <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1">
+                <h1 class="titulo_">Traffic Laws</h1>
+                <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
+                <button class="botaotrocar" onclick="toggleLanguage()">Trocar linguagem</button>
+            </div>
+        </center>
+
+        <section class="navigation" id="pt-br">
+            <h1><a href="index.html">Home Page</a></h1>
+            <div class="dropdown">
+                <button class="dropbtn"><h1>Direitos & Deveres</h1></button>
+                <div class="dropdown-content">
+                    <center style="margin: 10px;"><h2>Direitos</h2></center>
+                    <a href="deveres.html"><h2>Deveres</h2></a>
+                </div>
+            </div>
+            <h1><a href="multas.html">Multas</a></h1>
+            <h1><a href="https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/fale-conosco-senatran">Perguntas & respostas</a></h1>
+        </section>
+
+        <section class="navigation" id="eng">
+            <h1><a href="index.html">Home Page</a></h1>
+            <div class="dropdown">
+                <button class="dropbtn"><h1>Rights and Duties</h1></button>
+                <div class="dropdown-content">
+                    <h2>Rights</h2>
+                    <a href="deveres.html"><h2>Duties</h2></a>
+                </div>
+            </div>
+            <h1><a href="multas.html">Fine</a></h1>
+            <h1><a href="perguntas&respostas.html">Questions & Answers</a></h1>
+        </section>
+
+    </header>
+
+    <main>
+        <div id="video-dropdown">
+            <!-- Dropdown para selecionar o vídeo -->
+            <select id="video-select" onchange="changeVideo()">
+                <option value="0">Select a video...</option>
+                <option value="1">Video 1</option>
+                <option value="2">Video 2</option>
+                <option value="3">Video 3</option>
+                <option value="4">Video 4</option>
+                <option value="5">Video 5</option>
+                <option value="6">Video 6</option>
+                <option value="7">Video 7</option>
+            </select>
+
+            <!-- Vídeos, inicialmente escondidos -->
+            <div class="video-item" id="video-1" style="display: none;">
+                <iframe class="vd-item" width="560" height="315" src="https://www.youtube.com/embed/yvA2PNoZ98Y?si=RqYtjhie-DImCsFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item" id="video-2" style="display: none;">
+                <iframe class="vd-item" width="560" height="315" src="https://www.youtube.com/embed/-WUBRF2owMI?si=5G5a_NOxjxB7vrjb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item" id="video-3" style="display: none;">
+                <iframe class="vd-item" width="560" height="315" src="https://www.youtube.com/embed/u0fSeMGwTus?si=vU5TlaUnBsOStHaS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item" id="video-4" style="display: none;">
+                <iframe class="vd-item" width="560" height="315" src="https://www.youtube.com/embed/ymdSFZtJx2I?si=qVlTAxlHZUkNcwFv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item" id="video-5" style="display: none;">
+                <iframe class="vd-item" width="560" height="315" src="https://www.youtube.com/embed/Ks3hcNMyx8U?si=jtCfYvxU9WmuvNhI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item" id="video-6" style="display: none;">
+                <iframe class="vd-item" width="560" height="315" src="https://www.youtube.com/embed/6JGgE8QkKLI?si=g9hly3QyPv2vUqyC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item" id="video-7" style="display: none;">
+                <iframe class="vd-item" width="560" height="315" src="https://www.youtube.com/embed/d124R0k3fKU?si=mBSGlXGlfOah9sGy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <script>
+            function toggleLanguage() {
+                const ptBrElements = document.querySelectorAll("#pt-br");
+                const engElements = document.querySelectorAll("#eng");
+
+                const isPtVisible = Array.from(engElements).some(el => el.style.display !== "none" && el.style.display !== "");
+
+                if (isPtVisible) {
+                    ptBrElements.forEach(el => {
+                        el.style.display = el.classList.contains("navigation") ? "flex" : "block";
+                    });
+                    engElements.forEach(el => el.style.display = "none");
+                } else {
+                    engElements.forEach(el => {
+                        el.style.display = el.classList.contains("navigation") ? "flex" : "block";
+                    });
+                    ptBrElements.forEach(el => el.style.display = "none");
+                }
+            }
+
+            function changeVideo() {
+                const selectedVideo = document.getElementById("video-select").value;
+                const allVideos = document.querySelectorAll(".video-item");
+
+                // Esconde todos os vídeos
+                allVideos.forEach(video => video.style.display = "none");
+
+                // Exibe o vídeo selecionado
+                if (selectedVideo != "0") {
+                    document.getElementById(`video-${selectedVideo}`).style.display = "block";
+                }
+            }
+        </script>
+    </footer>
+</body>
+</html>

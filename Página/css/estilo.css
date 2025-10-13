@@ -187,12 +187,12 @@ table.tabela-placa h2 {
     color: #82cfff;
 }
 
-/* Placas amarelas escondidas inicialmente */
+
 #Placas-Amarelas {
     display: none;
 }
 
-/* Links gerais */
+
 a {
     color: #4dabf7;
     transition: color 0.2s;
@@ -210,3 +210,57 @@ a:hover {
     margin: 10px;
     width: 400px;
 }
+
+
+.nos {
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+    padding: 20px 0;
+}
+
+.nos > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nos img {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; 
+    margin-bottom: 10px;
+}
+
+.nos h2 {
+    margin: 0;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#video-select {
+    background-color: rgb(47, 47, 47);
+    display: flex;
+    justify-self: center;
+    padding: 7.5px;
+    border-radius: 7.5px;
+}
+
+.video-item {
+    display: flex;
+    justify-self: center;
+}
+
+body.dark-theme {
+    background: #181818;
+    color: #f1f1f1;
+}
+
+body.dark-theme header,
+body.dark-theme main,
+body.dark-theme footer {
+    background: #ffffff;
+    color: #f1f1f1;
+}
+
