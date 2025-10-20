@@ -15,6 +15,14 @@
     <!--INÍCIO-->
 
     <header>
+        <button class="botaotema" onclick="toggleTheme()">Tema Claro/Escuro</button>
+        <script>
+            function toggleTheme() {
+                document.body.classList.toggle("light-theme");
+                document.body.classList.toggle("dark-theme");
+            }
+        </script>        
+
         <div id="divisor"></div>
         
         <!--Título em Português-->
@@ -42,15 +50,13 @@
             <h1><a href="index.html">Home Page</a></h1>
             <div class="dropdown">
                 <button class="dropbtn">
-                    <h1>Leis & Deveres</h1>
+                    <h1>Direitos & Deveres</h1>
                 </button>
                 <div class="dropdown-content">
                     <a href="direitos.html">
-                        <h2>Leis</h2>
+                        <h2>Direitos</h2>
                     </a>
-                    
-                        <h2 class="deverescorigido">Deveres</h2>
-                    
+                    <h2 class="deverescorigido">Deveres</h2>
                 </div>
             </div>
             <h1><a href="multas.html">Multas</a></h1>
@@ -83,25 +89,29 @@
                 <center>
                     <h1 class="letra-grande">Deveres</h1>
                 </center>
-
+                <div><img src="imgs/maxresdefault.jpg" alt="D&D" style="width: 500px; display: flex; justify-self: center; border-radius: 10px;"></div>
                 <p class="inicio_text" style="margin-left: 10px;">Deveres do Motorista:</p><br>
+                <div class="image"><img src="imgs/d&d.jfif" alt="" style="width: 200px; margin-right: 30px; border-radius: 10px;"></div>
                 <ul class="inicio_text">
                     
                     <b>Principais deveres:</b><br><br>
-                    <li><b>Respeitar as leis de trânsito:</b> Obedecer aos sinais de trânsito, limites de velocidade e outras normas estabelecidas.</li><br>
-                    <li><b>Garantir a segurança:</b> Evitar acidentes, dirigir com atenção e responsabilidade, mantendo distância segura dos outros veículos e utilizando equipamentos de segurança como o cinto de segurança.</li><br>
-                    <li><b>Manter o veículo em boas condições:</b> Realizar manutenções regulares, como verificar freios, pneus, óleo e outros componentes essenciais para o bom funcionamento do veículo.</li><br>
-                    <li><b>Respeitar os outros usuários da via:</b> Ceder passagem quando necessário, não estacionar em locais proibidos, evitar comportamentos agressivos e respeitar a vez dos pedestres e ciclistas.</li><br>
-                    <li><b>Não dirigir sob efeito de álcool ou drogas:</b> É fundamental evitar o consumo de substâncias que possam prejudicar a capacidade de dirigir.</li><br>
-                    <li><b>Realizar exames toxicológicos (para motoristas profissionais):</b> Motoristas profissionais devem se submeter a exames periódicos para verificar o uso de substâncias ilícitas.</li><br>
-                    <li><b>Conhecer o veículo:</b> É importante que o motorista conheça as características e funcionalidades do veículo que está dirigindo.</li><br>
-                    <li><b>Evitar distrações:</b> Não utilizar o celular ou outros dispositivos eletrônicos enquanto dirige.</li><br>
-                    <li><b>Prever situações de risco:</b> Estar atento ao ambiente ao redor e antecipar possíveis perigos para evitar acidentes.</li>br 
-                    <li><b>Cumprir a jornada de trabalho:</b> Motoristas profissionais devem respeitar os limites de tempo de direção e descanso estabelecidos por lei.</li><br>
+                    <li><b>Respeitar as leis de trânsito:</b> Obedecer aos sinais de trânsito, limites de velocidade e outras normas estabelecidas.</li>
+                    <div class="imagd"><img src="imgs/d&d2.jfif" alt="" style="width: 250px; border-radius: 10px;"></div>
+                    <li><b>Garantir a segurança:</b> Evitar acidentes, dirigir com atenção e responsabilidade, mantendo distância segura dos outros veículos e utilizando equipamentos de segurança como o cinto de segurança.</li>
+                    <li><b>Manter o veículo em boas condições:</b> Realizar manutenções regulares, como verificar freios, pneus, óleo e outros componentes essenciais para o bom funcionamento do veículo.</li>
+                    <li><b>Respeitar os outros usuários da via:</b> Ceder passagem quando necessário, não estacionar em locais proibidos, evitar comportamentos agressivos e respeitar a vez dos pedestres e ciclistas.</li>
+                    <li><b>Não dirigir sob efeito de álcool ou drogas:</b> É fundamental evitar o consumo de substâncias que possam prejudicar a capacidade de dirigir.</li>
+                    <li><b>Realizar exames toxicológicos (para motoristas profissionais):</b> Motoristas profissionais devem se submeter a exames periódicos para verificar o uso de substâncias ilícitas.</li>
+                    <li><b>Conhecer o veículo:</b> É importante que o motorista conheça as características e funcionalidades do veículo que está dirigindo.</li>
+                    <li><b>Evitar distrações:</b> Não utilizar o celular ou outros dispositivos eletrônicos enquanto dirige.</li>
+                    <li><b>Prever situações de risco:</b> Estar atento ao ambiente ao redor e antecipar possíveis perigos para evitar acidentes.</li>
+                    <li><b>Cumprir a jornada de trabalho:</b> Motoristas profissionais devem respeitar os limites de tempo de direção e descanso estabelecidos por lei.</li>
                 </ul>
+                <br>
                 <h2 style="margin-left: 10px;">Placas de trânsito brasileiras</h2>
 
                 <select id="placaSelect">
+                    <option value="">Selecione um tipo de placa</option>
                     <option value="Placas-Brancas">Placas Brancas</option>
                     <option value="Placas-Amarelas">Placas Amarelas</option>
                     <option value="Placas-Azuis">Placas Azuis</option>
@@ -298,6 +308,7 @@
                     <li><b>Anticipate risky situations:</b> Be aware of the surrounding environment and anticipate potential dangers to avoid accidents.</li>
                     <li><b>Comply with the workday:</b> Professional drivers must respect the driving time and rest limits established by law.</li>
                 </ul>
+                <br>
                 <h2 style="margin-left: 10px;">Brazilian traffic signs</h2>
 
 

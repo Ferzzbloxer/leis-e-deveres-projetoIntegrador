@@ -1,0 +1,270 @@
+/* Reset e tema escuro */
+* {
+    margin: 0;
+    background-color: transparent;
+    color: inherit;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 764px;
+}
+
+/* Títulos */
+.titulo_ {
+    font-size: 75px;
+    display: inline;
+}
+
+.warning-icon_bordered1,
+.warning-icon_bordered2 {
+    width: 100px;
+    display: inline-block;
+}
+
+/* Texto */
+.inicio_text {
+    font-size: larger;
+    line-height: 1.6;
+}
+
+/* Seção início */
+#Início {
+    margin: 5px;
+    padding: 5px;
+}
+
+/* Navegação */
+.navigation {
+   display: flex;
+   justify-content: space-between;
+   border-radius: 6px;
+   border: 1px solid #333;
+   padding: 20px;
+   margin: 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+/* DropDown */
+.dropbtn {
+  border: none;
+  font-size: large;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+    background-color: #2a2a2a;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    font-size: smaller;
+}
+
+.dropdown-content a {
+    color: #e0e0e0;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Divisor */
+#divisor {
+    height: 20px;
+}
+
+/* Outras Perguntas */
+.outrasPerguntas {
+    display: flex;
+}
+
+/* Google Translate */
+#google_translate_element {
+    display: flex;
+    justify-self: center;
+    width: 170px;
+}
+
+/* Letra grande */
+.letra-grande {
+    font-size: 40px;
+}
+
+/* Tabelas de Placas */
+table.tabela-placa {
+    display: none;
+    width: calc(100% - 20px);
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: 10px;
+    background-color: #1e1e1e;
+}
+
+table.tabela-placa td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+table.tabela-placa img {
+    max-width: 100px;
+    height: auto;
+}
+
+table.tabela-placa h2 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+/* Idioma inglês oculto inicialmente */
+#eng {
+    display: none;
+}
+
+/* Select de placas */
+#placaSelect {
+    font-size: large;
+    padding: 5px 10px;
+    margin: 20px;
+    display: block;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    justify-self: center;
+}
+
+/* Botão de trocar linguagem fixo */
+.botaotrocar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: large;
+    padding: 8px 14px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+.botaotrocar:hover {
+    background-color: #333;
+    color: #82cfff;
+}
+
+
+#Placas-Amarelas {
+    display: none;
+}
+
+
+a {
+    color: #4dabf7;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #82cfff;
+}
+.imagd img {
+    float: right;
+    margin: 10px;
+    width: 400px;
+}
+.image img {
+    float: left;
+    margin: 10px;
+    width: 400px;
+}
+
+
+.nos {
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+    padding: 20px 0;
+}
+
+.nos > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nos img {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; 
+    margin-bottom: 10px;
+}
+
+.nos h2 {
+    margin: 0;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#video-select {
+    background-color: rgb(47, 47, 47);
+    display: flex;
+    justify-self: center;
+    padding: 7.5px;
+    border-radius: 7.5px;
+}
+
+.video-item {
+    display: flex;
+    justify-self: center;
+}
+
+/* Tema escuro */
+.dark-theme {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-theme a {
+    color: white;
+}
+
+.dark-theme .botaotema,
+.dark-theme .botaotrocar,
+.dark-theme .dropbtn {
+    background-color: #121212;
+    color: white;
+}
+
+/* Evita texto invisível ao alternar tema */
+body {
+    background-color: white;
+    color: black;
+}
+
+.botaotema,
+.botaotrocar{
+    background-color: #f0f0f0;
+    color: black;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+}

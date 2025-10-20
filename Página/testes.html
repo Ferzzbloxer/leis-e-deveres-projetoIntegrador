@@ -1,171 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leis de Trânsito</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="imgs/1397905.png">
-    <style>
-        #eng { display: none; } /* Começa mostrando apenas PT-BR */
-    </style>
+    <title>Background Color Changer</title>
 </head>
 <body>
-
-    <header>
-        <div id="divisor"></div>
-        
-        <center><div class="título" id="pt-br">
-            <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1">
-            <h1 class="titulo_">Leis de Trânsito</h1>
-            <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
-        </div></center>
-
-        <center><div class="título" id="eng">
-            <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1">
-            <h1 class="titulo_">Traffic Laws</h1>
-            <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
-        </div></center>
-
-        
-        <section class="navigation" id="pt-br">
-            <h1>Home Page</h1>
-            <div class="dropdown">
-                <button class="dropbtn"><h1>Leis & Deveres</h1></button>
-                <div class="dropdown-content">
-                    <a href="leis.html"><h2>Leis</h2></a>
-                    <a href="deveres.html"><h2>Deveres</h2></a>
-                </div>
-            </div>
-            <h1><a href="multas.html">Multas</a></h1>
-            <h1><a href="https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/fale-conosco-senatran">Perguntas & respostas</a></h1>
-            <button onclick="toggleLanguage()">Toggle Language</button>
-        </section>
-
-        <section class="navigation" id="eng">
-            <h1>Home Page</h1>
-            <div class="dropdown">
-                <button class="dropbtn"><h1>Laws and Duties</h1></button>
-                <div class="dropdown-content">
-                    <a href="leis.html"><h2>Laws</h2></a>
-                    <a href="deveres.html"><h2>Duties</h2></a>
-                </div>
-            </div>
-            <h1><a href="multas.html">Fine</a></h1>
-            <h1><a href="perguntas&respostas.html">Questions & Answers</a></h1>
-            <button onclick="toggleLanguage()">Trocar linguagem</button>
-        </section>
-
-    </header>
-
-    <main>
-        <section id="pt-br">
-            <section id="Início">
-                <center><h1>Início</h1></center>
-                <p class="inicio_text">
-                    <br>
-                    Olá! Nós somos o Otávio, Fernando e Miguel, criadores do site Leis de Trânsito Brasil.
-                    Decidimos criar esse espaço com um objetivo simples: ajudar as pessoas a entender
-                    melhor as regras de trânsito e dirigir com mais segurança.
-                    <br>
-                </p>
-                <p class="inicio_text">
-                    <br>
-                    A ideia surgiu quando estávamos estudando para tirar a carteira de motorista e percebemos
-                    como muitos conteúdos sobre o Código de Trânsito Brasileiro (CTB) são confusos, técnicos
-                    demais ou desatualizados. Pensamos: por que não fazer algo mais claro, direto e acessível
-                    para todos?
-                    <br>
-                </p>
-                <p class="inicio_text">
-                    <br>
-                    Miguel é estudante de Direito e sempre teve interesse por legislação, principalmente a parte
-                    que impacta o nosso dia a dia. Já o Fernando é desenvolvedor web e apaixonado por tecnologia
-                     — foi ele quem programou todo o site.
-                     <br>
-                </p>
-                <p class="inicio_text">
-                    <br>
-                    Aqui, você vai encontrar:
-                    <br>
-                    -Explicações simples sobre as leis de trânsito
-                    <br>
-                    -Exemplos práticos
-                    <br>
-                    -Ilustrações das placas
-                    <br>
-                    -Atualizações importantes sobre mudanças no CTB
-                    <br>
-                    -Nosso objetivo é que esse site sirva tanto para quem está aprendendo a dirigir quanto para motoristas experientes que querem se manter atualizados. Afinal, trânsito seguro começa com informação de qualidade.
-                    <br><br>
-                    Esperamos que nosso conteúdo te ajude!
-                    Se quiser mandar sugestões ou tirar dúvidas, é só entrar em contato com a gente na aba de Contato. 🚗
-                    <br><br>
-                    — Otávio & Fernando e Miguel.
-                </p>
-            </section>
-        </section>
-
-        <section id="eng">
-            <center><h1>Start</h1></center>
-            <p class="inicio_text">
-                <br>
-                Hello! We are Otávio, Fernando, and Miguel, creators of the website *Leis de Trânsito Brasil*.
-                We created this space with a simple goal: to help people better understand traffic rules and drive more safely.
-                <br>
-            </p>
-            <p class="inicio_text">
-                <br>
-                The idea came to us while we were studying to get our driver's licenses and noticed how much of the content about the Brazilian Traffic Code (CTB) is confusing, overly technical, or outdated.
-                So we thought: why not make something clearer, more direct, and accessible to everyone?
-                <br>
-            </p>
-            <p class="inicio_text">
-                <br>
-                Miguel is a law student and has always been interested in legislation, especially the kind that affects our daily lives.
-                Fernando is a web developer and passionate about technology — he built the entire site from scratch.
-                <br>
-            </p>
-            <p class="inicio_text">
-                <br>
-                On this site, you’ll find:
-                <br>
-                - Clear explanations of traffic laws
-                <br>
-                - Practical examples
-                <br>
-                - Road sign illustrations
-                <br>
-                - Important updates on changes to the CTB
-                <br>
-                Our goal is for this site to be useful both for people learning to drive and for experienced drivers who want to stay up to date.
-                After all, safe driving starts with quality information.
-                <br><br>
-                We hope our content helps you!
-                If you’d like to send suggestions or ask questions, just visit the Contact tab. 🚗
-                <br><br>
-                — Otávio, Fernando & Miguel.
-            </p>
-        </section>
-    </main>
-
-    <footer></footer>
+    <h1>Click the button to change the background color!</h1>
+    <button onclick="changeBackgroundColor()">Change Color</button>
 
     <script>
-    function toggleLanguage() {
-        const ptBrElements = document.querySelectorAll("#pt-br");
-        const engElements = document.querySelectorAll("#eng");
+        function changeBackgroundColor() {
+            const currentColor = window.getComputedStyle(document.body).backgroundColor;
 
-        const isPtVisible = Array.from(ptBrElements).some(el => el.style.display !== "none" && el.style.display !== "");
-
-        if (isPtVisible) {
-            ptBrElements.forEach(el => el.style.display = "none");
-            engElements.forEach(el => el.style.display = "block");
-        } else {
-            engElements.forEach(el => el.style.display = "none");
-            ptBrElements.forEach(el => el.style.display = "block");
+            // Verifica se a cor atual é branca
+            if (currentColor === 'rgb(255, 255, 255)' || currentColor === 'white') {
+                document.body.style.backgroundColor = 'black';
+            } else {
+                document.body.style.backgroundColor = 'white';
+            }
         }
-    }
+
+        // Define o fundo branco inicialmente (opcional, mas garante consistência)
+        document.body.style.backgroundColor = 'white';
     </script>
 </body>
 </html>

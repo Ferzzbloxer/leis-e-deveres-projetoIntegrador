@@ -1,0 +1,392 @@
+/* Reset e tema escuro */
+* {
+    margin: 0;
+    background-color: transparent;
+    color: inherit;
+}
+
+html, body {
+    background-color: #121212;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e0e0e0;
+    min-height: 764px;
+}
+
+/* Títulos */
+.titulo_ {
+    font-size: 75px;
+    display: inline;
+    color: #ffffff;
+}
+
+.warning-icon_bordered1,
+.warning-icon_bordered2 {
+    width: 100px;
+    display: inline-block;
+}
+
+/* Texto */
+.inicio_text {
+    font-size: larger;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* Seção início */
+#Início {
+    margin: 5px;
+    padding: 5px;
+}
+
+/* Navegação */
+.navigation {
+   display: flex;
+   justify-content: space-between;
+   border-radius: 6px;
+   border: 1px solid #333;
+   padding: 20px;
+   margin: 10px;
+   background-color: #1e1e1e;
+}
+
+.navigation a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.navigation a:hover {
+    color: #82cfff;
+}
+
+/* DropDown */
+.dropbtn {
+  border: none;
+  font-size: large;
+  background-color: inherit;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+    background-color: #2a2a2a;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    border: 1px solid #444;
+    z-index: 1;
+    font-size: smaller;
+}
+
+.dropdown-content a {
+    color: #e0e0e0;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+    color: #82cfff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Divisor */
+#divisor {
+    height: 20px;
+}
+
+/* Outras Perguntas */
+.outrasPerguntas {
+    display: flex;
+}
+
+/* Google Translate */
+#google_translate_element {
+    display: flex;
+    justify-self: center;
+    width: 170px;
+}
+
+/* Letra grande */
+.letra-grande {
+    font-size: 40px;
+}
+
+/* Tabelas de Placas */
+table.tabela-placa {
+    display: none;
+    width: calc(100% - 20px);
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: 10px;
+    background-color: #1e1e1e;
+}
+
+table.tabela-placa td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+table.tabela-placa img {
+    max-width: 100px;
+    height: auto;
+}
+
+table.tabela-placa h2 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+/* Idioma inglês oculto inicialmente */
+#eng {
+    display: none;
+}
+
+/* Select de placas */
+#placaSelect {
+    font-size: large;
+    padding: 5px 10px;
+    margin: 20px;
+    display: block;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    justify-self: center;
+}
+
+/* Botão de trocar linguagem fixo */
+.botaotrocar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: large;
+    padding: 8px 14px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+.botaotrocar:hover {
+    background-color: #333;
+    color: #82cfff;
+}
+
+
+#Placas-Amarelas {
+    display: none;
+}
+
+
+a {
+    color: #4dabf7;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #82cfff;
+}
+.imagd img {
+    float: right;
+    margin: 10px;
+    width: 400px;
+}
+.image img {
+    float: left;
+    margin: 10px;
+    width: 400px;
+}
+
+
+.nos {
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+    padding: 20px 0;
+}
+
+.nos > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nos img {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; 
+    margin-bottom: 10px;
+}
+
+.nos h2 {
+    margin: 0;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#video-select {
+    background-color: rgb(47, 47, 47);
+    display: flex;
+    justify-self: center;
+    padding: 7.5px;
+    border-radius: 7.5px;
+}
+
+.video-item {
+    display: flex;
+    justify-self: center;
+}
+
+body.dark-theme {
+    background: #181818;
+    color: #f1f1f1;
+}
+
+body.dark-theme header,
+body.dark-theme main,
+body.dark-theme footer {
+    background: #ffffff;
+    color: #f1f1f1;
+}
+
+
+
+/* === TEMAS === */
+
+/* Tema escuro (padrão) */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme header,
+body.dark-theme main,
+body.dark-theme footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+/* === TEMA CLARO === */
+body.light-theme {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+body.light-theme header,
+body.light-theme main,
+body.light-theme footer {
+    background-color: #ffffff;
+    color: #111111;
+    border-color: #ccc;
+}
+
+/* Navegação e caixas */
+body.light-theme .navigation {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .dropbtn,
+body.light-theme .dropdown-content,
+body.light-theme .botaotrocar,
+body.light-theme #placaSelect {
+    background-color: #f8f8f8;
+    color: #111111;
+    border: 1px solid #ccc;
+}
+
+body.light-theme .dropdown-content a {
+    color: #111111;
+}
+
+body.light-theme .dropdown-content a:hover {
+    background-color: #f0f0f0;
+    color: #0073e6;
+}
+
+/* Textos e títulos */
+body.light-theme .inicio_text,
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme .titulo_,
+body.light-theme table.tabela-placa h2 {
+    color: #111111;
+}
+
+/* Tabelas */
+body.light-theme table.tabela-placa {
+    background-color: #ffffff;
+    border-color: #ccc;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme table.tabela-placa td {
+    background-color: #ffffff;
+    color: #111111;
+    border-color: #ddd;
+}
+
+/* Links */
+body.light-theme a {
+    color: #0056b3;
+}
+body.light-theme a:hover {
+    color: #003d80;
+}
+
+/* Botão do tema */
+.botaotema {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1000;
+}
+.botaotema:hover {
+    background-color: #333;
+    color: #82cfff;
+}
+
+/* Botão no modo claro */
+body.light-theme .botaotema {
+    background-color: #f5f5f5;
+    color: #111111;
+    border: 1px solid #ccc;
+}
+body.light-theme .botaotema:hover {
+    background-color: #e6e6e6;
+}
+
+/* Outros elementos */
+body.light-theme #divisor {
+    background-color: #f0f0f0;
+}
+
+body.light-theme select {
+    background-color: #ffffff;
+    color: #111111;
+    border: 1px solid #ccc;
+}
