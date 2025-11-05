@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leis de Trânsito</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilo_atualizado.css">
     <link rel="shortcut icon" type="image/x-icon" href="imgs/1397905.png">
 
 </head>
@@ -15,38 +15,51 @@
     <!--INÍCIO-->
 
     <header>
-        <button class="botaotema" onclick="toggleTheme()">Tema Claro/Escuro</button>
+        <button class="botaotema" onclick="changeBackgroundColor()">Change Color</button>
+
         <script>
-            function toggleTheme() {
-                document.body.classList.toggle("light-theme");
-                document.body.classList.toggle("dark-theme");
+            function changeBackgroundColor() {
+                document.body.classList.toggle('dark-theme');
+
+                if (document.body.classList.contains('dark-theme')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
             }
-        </script>        
+
+            window.onload = function() {
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.body.classList.add('dark-theme');
+                }
+            }
+        </script>
+    
 
         <div id="divisor"></div>
         
         <!--Título em Português-->
         <center>
-            <div class="título" id="pt-br">
+            <div class="título pt-br">
                 <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1"><!---->
-                <h1 class="titulo_">Leis de Trânsito</h1><!----><img
-                    src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
-                            <button  class="botaotrocar" onclick="toggleLanguage()">Toggle Language</button>
+                <h1 class="titulo_">Leis de Trânsito</h1><!---->
+                <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
+                <button  class="botaotrocar" onclick="toggleLanguage()">Toggle Language</button>
             </div>
         </center>
 
         <!--Título em Inglês-->
         <center>
-            <div class="título" id="eng">
+            <div class="título eng">
                 <img src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered1"><!---->
-                <h1 class="titulo_">Traffic Laws for Neanderthals</h1><!----><img
+                <h1 class="titulo_">Traffic Laws</h1><!----><img
                     src="imgs/warning-icon_bordered.webp" alt="warning-icon" class="warning-icon_bordered2">
                             <button  class="botaotrocar" onclick="toggleLanguage()">Trocar linguagem</button>
             </div>
         </center>
 
         <!--Tabela de navegação em Português-->
-        <section class="navigation" id="pt-br">
+        <section class="navigation pt-br">
             <h1><a href="index.html">Home Page</a></h1>
             <div class="dropdown">
                 <button class="dropbtn">
@@ -64,7 +77,7 @@
         </section>
 
         <!--Tabela de navegação em Inglês-->
-        <section class="navigation" id="eng">
+        <section class="navigation eng">
             <h1><a href="index.html">Home Page</a></h1>
             <div class="dropdown">
                 <button class="dropbtn">
@@ -84,7 +97,7 @@
     </header>
 
         <!--INFO PRINCIPAL EM PORTUGUÊS-->
-        <main id="pt-br">
+        <main class="pt-br">
             <section>
                 <center>
                     <h1 class="letra-grande">Deveres</h1>
@@ -289,15 +302,18 @@
         </main>
 
         <!--INFO PRINCIPAL EM INGLÊS-->
-        <main id="eng">
-            <section id="eng">
+        <main class="eng">
+            <section class="eng">
                 <center>
                     <h1 class="letra-grande">Duties</h1>
                 </center>
+                <div><img src="imgs/maxresdefault.jpg" alt="D&D" style="width: 500px; display: flex; justify-self: center; border-radius: 10px;"></div>
+                <p class="inicio_text" style="margin-left: 10px;">Driver's Duties:</p><br>
+                <div class="image"><img src="imgs/d&d.jfif" alt="" style="width: 200px; margin-right: 30px; border-radius: 10px;"></div>
                 <ul class="inicio_text">
-                    <p>Driver's Duties:</p><br>
-                    <b>Main duties:</b>
+                    <b>Main duties:</b><br><br>
                     <li><b>Respect traffic laws:</b> Obey traffic signals, speed limits, and other established regulations.</li>
+                    <div class="imagd"><img src="imgs/d&d2.jfif" alt="" style="width: 250px; border-radius: 10px;"></div>
                     <li><b>Ensure safety:</b> Avoid accidents, drive with attention and responsibility, maintaining a safe distance from other vehicles and using safety equipment such as the seatbelt.</li>
                     <li><b>Keep the vehicle in good condition:</b> Perform regular maintenance, such as checking brakes, tires, oil, and other essential components for the proper functioning of the vehicle.</li>
                     <li><b>Respect other road users:</b> Yield the right-of-way when necessary, do not park in prohibited areas, avoid aggressive behavior, and respect pedestrians' and cyclists' turns.</li>
@@ -495,23 +511,32 @@
                 </table>
                     <script>
     function toggleLanguage() {
-        const ptBrElements = document.querySelectorAll("#pt-br");
-        const engElements = document.querySelectorAll("#eng");
+        const ptBrElements = document.querySelectorAll(".pt-br");
+        const engElements = document.querySelectorAll(".eng");
 
-        const isPtVisible = Array.from(engElements).some(el => el.style.display !== "none" && el.style.display !== "");
+        // Detecta se o inglês está visível atualmente
+        const isEngVisible = Array.from(engElements).some(el => el.style.display !== "none" && el.style.display !== "");
 
-        if (isPtVisible) {
-        ptBrElements.forEach(el => {
-           el.style.display = el.classList.contains("navigation") ? "flex" : "block";
-        });
-        engElements.forEach(el => el.style.display = "none");
+        if (isEngVisible) {
+            // Mostra português, esconde inglês
+            ptBrElements.forEach(el => {
+                el.style.display = el.classList.contains("navigation") ? "flex" : "block";
+            });
+            engElements.forEach(el => el.style.display = "none");
         } else {
-        engElements.forEach(el => {
-           el.style.display = el.classList.contains("navigation") ? "flex" : "block";
-        });
-        ptBrElements.forEach(el => el.style.display = "none");
+            // Mostra inglês, esconde português
+            engElements.forEach(el => {
+                el.style.display = el.classList.contains("navigation") ? "flex" : "block";
+            });
+            ptBrElements.forEach(el => el.style.display = "none");
         }
     }
+
+    // Garante que os blocos em inglês começam ocultos por padrão
+    window.addEventListener('load', function() {
+        const engElements = document.querySelectorAll('.eng');
+        engElements.forEach(el => el.style.display = 'none');
+    });
     
     </script>
     

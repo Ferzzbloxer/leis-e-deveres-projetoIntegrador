@@ -180,12 +180,10 @@ table.tabela-placa h2 {
 
 
 a {
-    color: #4dabf7;
+    color: #000000;
     transition: color 0.2s;
 }
-a:hover {
-    color: #82cfff;
-}
+
 .imagd img {
     float: right;
     margin: 10px;
@@ -238,7 +236,6 @@ a:hover {
     justify-self: center;
 }
 
-/* Tema escuro */
 .dark-theme {
     background-color: #121212;
     color: white;
@@ -255,7 +252,6 @@ a:hover {
     color: white;
 }
 
-/* Evita texto invisível ao alternar tema */
 body {
     background-color: white;
     color: black;
